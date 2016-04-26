@@ -80,15 +80,49 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
+<meta name="description" content="##内部类
+
+将一个类定义在另一个类的里面，对里面那个类就称为内部类（内置类，嵌套类）。访问特点：
+
+
+内部类可以直接访问外部类中的成员，包括私有成员。
+而外部类要访问内部类中的成员必须要建立内部类的对象
+
+###内部类的访问规则：
+
+内部类可以直接访问外部类中的成员，包括私有。 之所以可以直接访问外部类中的成员，是因为内部类中持有了一个外部类的引用，**格式：**
+外部类名.this：Outer">
+<meta property="og:type" content="article">
 <meta property="og:title" content="zivDev">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/04/26/09面向对象-内部类/index.html">
 <meta property="og:site_name" content="zivDev">
-<meta property="og:description">
+<meta property="og:description" content="##内部类
+
+将一个类定义在另一个类的里面，对里面那个类就称为内部类（内置类，嵌套类）。访问特点：
+
+
+内部类可以直接访问外部类中的成员，包括私有成员。
+而外部类要访问内部类中的成员必须要建立内部类的对象
+
+###内部类的访问规则：
+
+内部类可以直接访问外部类中的成员，包括私有。 之所以可以直接访问外部类中的成员，是因为内部类中持有了一个外部类的引用，**格式：**
+外部类名.this：Outer">
+<meta property="og:updated_time" content="2016-04-25T14:48:38.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zivDev">
-<meta name="twitter:description">
+<meta name="twitter:description" content="##内部类
+
+将一个类定义在另一个类的里面，对里面那个类就称为内部类（内置类，嵌套类）。访问特点：
+
+
+内部类可以直接访问外部类中的成员，包括私有成员。
+而外部类要访问内部类中的成员必须要建立内部类的对象
+
+###内部类的访问规则：
+
+内部类可以直接访问外部类中的成员，包括私有。 之所以可以直接访问外部类中的成员，是因为内部类中持有了一个外部类的引用，**格式：**
+外部类名.this：Outer">
 
 
 
@@ -106,7 +140,7 @@
   };
 </script>
 
-  <title> zivDev </title>
+  <title>  | zivDev </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hansc">
@@ -127,9 +161,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -243,9 +275,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -266,9 +298,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/26/09面向对象-内部类/" itemprop="url">
-                  Unbenannt
-                </a>
               
             
           </h1>
@@ -308,9 +337,7 @@
       
 
       
-        
-          
-            <p>##内部类</p>
+        <p>##内部类</p>
 <ol>
 <li>将一个类定义在另一个类的里面，对里面那个类就称为内部类（内置类，嵌套类）。<br>访问特点：</li>
 </ol>
@@ -358,16 +385,23 @@
 </li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">interface Inter &#123;</span><br><span class="line">	void method();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Test </span><br><span class="line">&#123;</span><br><span class="line">	//补足代码。通过匿名内部类。</span><br><span class="line">	/*</span><br><span class="line">	static class Inner implements Inter	&#123;</span><br><span class="line">		public void method() &#123;</span><br><span class="line">			System.out.println(&quot;method run&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	*/</span><br><span class="line"></span><br><span class="line">	static Inter function()	&#123;</span><br><span class="line">		return new Inter() &#123;</span><br><span class="line">			public void method() &#123;</span><br><span class="line">				System.out.println(&quot;method run&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class InnerClassTest &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">		//Test.function():Test类中有一个静态的方法function。</span><br><span class="line">		//.method():function这个方法运算后的结果是一个对象。而且是一个Inter类型的对象。</span><br><span class="line">		//因为只有是Inter类型的对象，才可以调用method方法。</span><br><span class="line">		Test.function().method();</span><br><span class="line">//		Inter in = Test.function();</span><br><span class="line">//		in.method();</span><br><span class="line">		show(new Inter() &#123;</span><br><span class="line">			public void method() &#123;</span><br><span class="line">				System.out.println(&quot;method show run&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static void show(Inter in) &#123;</span><br><span class="line">		in.method();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class InnerTest &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		new Object() &#123;</span><br><span class="line">			public void function() &#123;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;.function();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
     
     <div>
       
+        
+<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt=" wechat" style="width: 200px; max-width: 100%;"/>
+    <div>cvdff123</div>
+</div>
+
+      
     </div>
 
     <div>
+      
+        
       
     </div>
 
@@ -375,212 +409,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/04/26/07面向对象（匿名对象）/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/04/26/07面向对象（匿名对象）/" itemprop="url">
-                  Unbenannt
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-04-26T08:06:18+08:00" content="2016-04-26">
-              2016-04-26
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">	匿名对象：就是没有名字的对象。</span><br><span class="line">	</span><br><span class="line">	匿名对象的应用场景：</span><br><span class="line">		A:调用方法，仅仅只调用一次的时候。</span><br><span class="line">			注意：调用多次的时候，不适合。</span><br><span class="line">			那么，这种匿名调用有什么好处吗?</span><br><span class="line">				有，匿名对象调用完毕就是垃圾。可以被垃圾回收器回收。</span><br><span class="line">		B:匿名对象可以作为实际参数传递</span><br><span class="line">*/</span><br><span class="line">class Student &#123;</span><br><span class="line">	public void show() &#123;</span><br><span class="line">		System.out.println(&quot;我爱学习&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class StudentDemo &#123;</span><br><span class="line">	public void method(Student s) &#123;</span><br><span class="line">		s.show();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class NoNameDemo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		//带名字的调用</span><br><span class="line">		Student s = new Student();</span><br><span class="line">		s.show();</span><br><span class="line">		s.show();</span><br><span class="line">		System.out.println(&quot;--------------&quot;);</span><br><span class="line">		</span><br><span class="line">		//匿名对象</span><br><span class="line">		//new Student();</span><br><span class="line">		//匿名对象调用方法</span><br><span class="line">		new Student().show();</span><br><span class="line">		new Student().show(); //这里其实是重新创建了一个新的对象</span><br><span class="line">		System.out.println(&quot;--------------&quot;);</span><br><span class="line">		</span><br><span class="line">		//匿名对象作为实际参数传递</span><br><span class="line">		StudentDemo sd = new StudentDemo();</span><br><span class="line">		//Student ss = new Student();</span><br><span class="line">		//sd.method(ss); //这里的s是一个实际参数</span><br><span class="line">		//匿名对象</span><br><span class="line">		sd.method(new Student());</span><br><span class="line">		</span><br><span class="line">		//在来一个</span><br><span class="line">		new StudentDemo().method(new Student());</span><br><span class="line"> 	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/26/07成员变量和局部变量的区别(理解)/" itemprop="url">
-                  Unbenannt
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-04-26T08:06:18+08:00" content="2016-04-26">
-              2016-04-26
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>##成员变量和局部变量的区别(理解)</p>
-<ol>
-<li>在类中的位置不同<br>成员变量：类中方法外<br>局部变量：方法定义中或者方法声明上</li>
-<li>在内存中的位置不同<br>成员变量：在堆中<br>局部变量：在栈中</li>
-<li>生命周期不同<br>成员变量：随着对象的创建而存在，随着对象的消失而消失<br>局部变量：随着方法的调用而存在，随着方法的调用完毕而消失</li>
-<li>初始化值不同<br>成员变量：有默认值<br>局部变量：没有默认值，必须定义，赋值，然后才能使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Varialbe &#123;</span><br><span class="line">	//int num = 10;//成员变量</span><br><span class="line">	int num; //初始化默认值为0</span><br><span class="line">	public void show() &#123;</span><br><span class="line">		//int num2; //没有默认值，未初始化，编译不通过报错</span><br><span class="line">		int num2 = 20;//必须初始化</span><br><span class="line">		System.out.println(num2);</span><br><span class="line">	</span><br><span class="line">		//int num = 100;</span><br><span class="line">		System.out.println(num);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class VariableDemo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Varialbe v = new Varialbe();</span><br><span class="line">		System.out.println(v.num); //访问成员变量</span><br><span class="line">		v.show();		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -588,6 +442,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -607,8 +465,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -673,6 +540,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">Dieser Artikel hat kein Inhaltsverzeichnis</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -769,6 +647,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
