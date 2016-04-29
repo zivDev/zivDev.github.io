@@ -266,6 +266,106 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/29/Arrays/" itemprop="url">
+                  Arrays
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-04-29T09:14:16+08:00" content="2016-04-29">
+              2016-04-29
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="开发原则："><a href="#开发原则：" class="headerlink" title="开发原则："></a>开发原则：</h3><p>只要是对象，我们就要判断该对象是否为null。</p>
+<h3 id="1-Arrays工具类"><a href="#1-Arrays工具类" class="headerlink" title="1. Arrays工具类"></a>1. Arrays工具类</h3><p>A:是针对数组进行操作的工具类。包括排序和查找等功能。<br>B:要掌握的方法(自己补齐方法)<br>    把数组转成字符串：toString()<br>    排序：sort()<br>    二分查找：binarySearch()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static String toString(int[] a)</span><br><span class="line">public static void sort(int[] a)   底层是快速排序，知道就可以了。有空看，有问题再问我</span><br><span class="line">public static int binarySearch(int[] a,int key)</span><br></pre></td></tr></table></figure>
+<h4 id="toString-源码解析："><a href="#toString-源码解析：" class="headerlink" title="toString()源码解析："></a>toString()源码解析：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">int[] arr = &#123; 24, 69, 80, 57, 13 &#125;;</span><br><span class="line">System.out.println(&quot;排序前：&quot; + Arrays.toString(arr));</span><br><span class="line"></span><br><span class="line">public static String toString(int[] a) &#123;</span><br><span class="line"></span><br><span class="line">	if (a == null)</span><br><span class="line">		return &quot;null&quot;; //说明数组对象不存在</span><br><span class="line">	int iMax = a.length - 1; //iMax=4;</span><br><span class="line">	if (iMax == -1)</span><br><span class="line">		return &quot;[]&quot;; //说明数组存在,但是没有元素。</span><br><span class="line"></span><br><span class="line">	StringBuilder b = new StringBuilder();</span><br><span class="line">	b.append(&apos;[&apos;); //&quot;[&quot;</span><br><span class="line">	for (int i = 0; ; i++) &#123;</span><br><span class="line">		b.append(a[i]); //&quot;[24, 69, 80, 57, 13&quot;</span><br><span class="line">		if (i == iMax)</span><br><span class="line">			//&quot;[24, 69, 80, 57, 13]&quot;</span><br><span class="line">		return b.append(&apos;]&apos;).toString();</span><br><span class="line">		b.append(&quot;, &quot;); //&quot;[24, 69, 80, 57, &quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="binarySearch-二分法查找-源码解析："><a href="#binarySearch-二分法查找-源码解析：" class="headerlink" title="binarySearch()(二分法查找)源码解析："></a>binarySearch()(二分法查找)源码解析：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">int[] arr = &#123;13, 24, 57, 69, 80&#125;;</span><br><span class="line">System.out.println(&quot;binarySearch:&quot; + Arrays.binarySearch(arr, 577));</span><br><span class="line"></span><br><span class="line">public static int binarySearch(int[] a, int key) &#123;</span><br><span class="line">	return binarySearch0(a, 0, a.length, key);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private static int binarySearch0(int[] a, int fromIndex, int toIndex,int key) &#123;</span><br><span class="line">	int low = fromIndex; //low=0</span><br><span class="line">	int high = toIndex - 1; //high=4</span><br><span class="line"></span><br><span class="line">	while (low &lt;= high) &#123;</span><br><span class="line">		int mid = (low + high) &gt;&gt;&gt; 1; //mid=2,mid=3,mid=4</span><br><span class="line">		int midVal = a[mid]; //midVal=57,midVal=69,midVal=80</span><br><span class="line"></span><br><span class="line">		if (midVal &lt; key)</span><br><span class="line">			low = mid + 1; //low=3,low=4,low=5</span><br><span class="line">		else if (midVal &gt; key)</span><br><span class="line">			high = mid - 1;</span><br><span class="line">			else</span><br><span class="line">				return mid; // key found</span><br><span class="line">	&#125;</span><br><span class="line">	return -(low + 1);  // key not found.</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-排序："><a href="#2-排序：" class="headerlink" title="2. 排序："></a>2. 排序：</h3><h4 id="选择排序："><a href="#选择排序：" class="headerlink" title="选择排序："></a>选择排序：</h4><p>把0索引的元素，和索引1以后的元素都进行比较，第一次完毕，最小值出现在了0索引。同理，其他的元素就可以排好。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public static void selectSort(int[] arr)&#123;</span><br><span class="line">	for(int x=0; x&lt;arr.length-1; x++)&#123;</span><br><span class="line">		for(int y=x+1; y&lt;arr.length; y++)&#123;</span><br><span class="line">			if(arr[y] &lt;arr[x])&#123;</span><br><span class="line">				int temp = arr[x];</span><br><span class="line">				arr[x] = arr[y];</span><br><span class="line">				 arr[y] = temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="冒泡排序："><a href="#冒泡排序：" class="headerlink" title="冒泡排序："></a>冒泡排序：</h4><p>相邻元素两两比较，大的往后放，第一次完毕，最大值出现在了最大索引处。同理，其他的元素就可以排好。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public static void bubbleSort(int[] arr)&#123;</span><br><span class="line">	for (int x = 0; x &lt; arr.length - 1; x++) &#123;</span><br><span class="line">		for (int y = 0; y &lt; arr.length - 1 - x; y++) &#123;</span><br><span class="line">			if (arr[y] &gt; arr[y + 1]) &#123;</span><br><span class="line">				int temp = arr[y];</span><br><span class="line">				arr[y] = arr[y + 1];</span><br><span class="line">				arr[y + 1] = temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/26/09面向对象-内部类/" itemprop="url">
                   Unbenannt
                 </a>
@@ -619,7 +719,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
