@@ -80,31 +80,15 @@
 
 
 
-<meta name="description" content="##成员变量和局部变量的区别(理解)
-
-在类中的位置不同成员变量：类中方法外局部变量：方法定义中或者方法声明上
-在内存中的位置不同成员变量：在堆中局部变量：在栈中
-生命周期不同成员变量：随着对象的创建而存在，随着对象的消失而消失局部变量：随着方法的调用而存在，随着方法的调用完毕而消失
-初始化值不同成员变量：有默认值局部变量：没有默认值，必须定义，赋值，然后才能使用12345678910111213">
-<meta property="og:type" content="article">
+<meta name="description">
+<meta property="og:type" content="website">
 <meta property="og:title" content="zivDev">
-<meta property="og:url" content="http://yoursite.com/2016/04/26/07成员变量和局部变量的区别(理解)/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/java基础/index.html">
 <meta property="og:site_name" content="zivDev">
-<meta property="og:description" content="##成员变量和局部变量的区别(理解)
-
-在类中的位置不同成员变量：类中方法外局部变量：方法定义中或者方法声明上
-在内存中的位置不同成员变量：在堆中局部变量：在栈中
-生命周期不同成员变量：随着对象的创建而存在，随着对象的消失而消失局部变量：随着方法的调用而存在，随着方法的调用完毕而消失
-初始化值不同成员变量：有默认值局部变量：没有默认值，必须定义，赋值，然后才能使用12345678910111213">
-<meta property="og:updated_time" content="2016-04-25T12:02:17.515Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zivDev">
-<meta name="twitter:description" content="##成员变量和局部变量的区别(理解)
-
-在类中的位置不同成员变量：类中方法外局部变量：方法定义中或者方法声明上
-在内存中的位置不同成员变量：在堆中局部变量：在栈中
-生命周期不同成员变量：随着对象的创建而存在，随着对象的消失而消失局部变量：随着方法的调用而存在，随着方法的调用完毕而消失
-初始化值不同成员变量：有默认值局部变量：没有默认值，必须定义，赋值，然后才能使用12345678910111213">
+<meta name="twitter:description">
 
 
 
@@ -122,7 +106,7 @@
   };
 </script>
 
-  <title>  | zivDev </title>
+  <title> 标签: java基础 | zivDev </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +127,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container one-collumn sidebar-position-right  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,125 +232,46 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        java基础
+        <small>标签</small>
+      </h2>
+    </div>
 
     
-      <header class="post-header">
+      
 
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2016/04/29/07面向对象（匿名对象）/" itemprop="url">
               
-                
+                <span itemprop="name">面向对象-匿名内部类</span>
               
-            
-          </h1>
+            </a>
         
+      </h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-26T08:06:18+08:00" content="2016-04-26">
-              2016-04-26
-            </time>
-          </span>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-04-29T10:50:23+08:00"
+              content="2016-04-29" >
+          04-29
+        </time>
+      </div>
 
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>##成员变量和局部变量的区别(理解)</p>
-<ol>
-<li>在类中的位置不同<br>成员变量：类中方法外<br>局部变量：方法定义中或者方法声明上</li>
-<li>在内存中的位置不同<br>成员变量：在堆中<br>局部变量：在栈中</li>
-<li>生命周期不同<br>成员变量：随着对象的创建而存在，随着对象的消失而消失<br>局部变量：随着方法的调用而存在，随着方法的调用完毕而消失</li>
-<li>初始化值不同<br>成员变量：有默认值<br>局部变量：没有默认值，必须定义，赋值，然后才能使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Varialbe &#123;</span><br><span class="line">	//int num = 10;//成员变量</span><br><span class="line">	int num; //初始化默认值为0</span><br><span class="line">	public void show() &#123;</span><br><span class="line">		//int num2; //没有默认值，未初始化，编译不通过报错</span><br><span class="line">		int num2 = 20;//必须初始化</span><br><span class="line">		System.out.println(num2);</span><br><span class="line">	</span><br><span class="line">		//int num = 100;</span><br><span class="line">		System.out.println(num);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class VariableDemo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Varialbe v = new Varialbe();</span><br><span class="line">		System.out.println(v.num); //访问成员变量</span><br><span class="line">		v.show();		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-      
-    </div>
-    
-    <div>
-      
-        
-<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt=" wechat" style="width: 200px; max-width: 100%;"/>
-    <div>cvdff123</div>
-</div>
-
-      
-    </div>
-
-    <div>
-      
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/26/07面向对象（匿名对象）/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
+    
   </div>
+
+  
 
 
           </div>
@@ -374,10 +279,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -397,17 +298,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -425,6 +317,13 @@
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -446,7 +345,7 @@
               <span class="links-of-author-item">
                 <a href="http://weibo.com/p/1005052656942325" target="_blank" title="weibo">
                   
-                    <i class="fa fa-globe"></i>
+                    <i class="fa fa-weibo"></i>
                   
                   weibo
                 </a>
@@ -455,7 +354,7 @@
               <span class="links-of-author-item">
                 <a href="https://www.zhihu.com/people/zhengyk" target="_blank" title="zhihu">
                   
-                    <i class="fa fa-globe"></i>
+                    <i class="fa fa-zhihu"></i>
                   
                   zhihu
                 </a>
@@ -472,17 +371,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -579,10 +467,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
