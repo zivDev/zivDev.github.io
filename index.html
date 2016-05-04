@@ -256,99 +256,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/29/07面向对象（匿名对象）/" itemprop="url">
-                  面向对象-匿名内部类
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-29T10:50:23+08:00" content="2016-04-29">
-              2016-04-29
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">	匿名对象：就是没有名字的对象。</span><br><span class="line">	</span><br><span class="line">	匿名对象的应用场景：</span><br><span class="line">		A:调用方法，仅仅只调用一次的时候。</span><br><span class="line">			注意：调用多次的时候，不适合。</span><br><span class="line">			那么，这种匿名调用有什么好处吗?</span><br><span class="line">				有，匿名对象调用完毕就是垃圾。可以被垃圾回收器回收。</span><br><span class="line">		B:匿名对象可以作为实际参数传递</span><br><span class="line">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"我爱学习"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StudentDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">(Student s)</span> </span>&#123;</span><br><span class="line">		s.show();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NoNameDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//带名字的调用</span></span><br><span class="line">		Student s = <span class="keyword">new</span> Student();</span><br><span class="line">		s.show();</span><br><span class="line">		s.show();</span><br><span class="line">		System.out.println(<span class="string">"--------------"</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//匿名对象</span></span><br><span class="line">		<span class="comment">//new Student();</span></span><br><span class="line">		<span class="comment">//匿名对象调用方法</span></span><br><span class="line">		<span class="keyword">new</span> Student().show();</span><br><span class="line">		<span class="keyword">new</span> Student().show(); <span class="comment">//这里其实是重新创建了一个新的对象</span></span><br><span class="line">		System.out.println(<span class="string">"--------------"</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//匿名对象作为实际参数传递</span></span><br><span class="line">		StudentDemo sd = <span class="keyword">new</span> StudentDemo();</span><br><span class="line">		<span class="comment">//Student ss = new Student();</span></span><br><span class="line">		<span class="comment">//sd.method(ss); //这里的s是一个实际参数</span></span><br><span class="line">		<span class="comment">//匿名对象</span></span><br><span class="line">		sd.method(<span class="keyword">new</span> Student());</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//在来一个</span></span><br><span class="line">		<span class="keyword">new</span> StudentDemo().method(<span class="keyword">new</span> Student());</span><br><span class="line"> 	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/04/29/成员变量和局部变量的区别/" itemprop="url">
                   成员变量和局部变量的区别
                 </a>
@@ -508,6 +415,99 @@
               阅读全文 &raquo;
             </a>
           </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/04/29/07面向对象（匿名对象）/" itemprop="url">
+                  面向对象-匿名内部类
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-29T10:50:23+08:00" content="2016-04-29">
+              2016-04-29
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">	匿名对象：就是没有名字的对象。</span><br><span class="line">	</span><br><span class="line">	匿名对象的应用场景：</span><br><span class="line">		A:调用方法，仅仅只调用一次的时候。</span><br><span class="line">			注意：调用多次的时候，不适合。</span><br><span class="line">			那么，这种匿名调用有什么好处吗?</span><br><span class="line">				有，匿名对象调用完毕就是垃圾。可以被垃圾回收器回收。</span><br><span class="line">		B:匿名对象可以作为实际参数传递</span><br><span class="line">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"我爱学习"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StudentDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">(Student s)</span> </span>&#123;</span><br><span class="line">		s.show();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NoNameDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//带名字的调用</span></span><br><span class="line">		Student s = <span class="keyword">new</span> Student();</span><br><span class="line">		s.show();</span><br><span class="line">		s.show();</span><br><span class="line">		System.out.println(<span class="string">"--------------"</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//匿名对象</span></span><br><span class="line">		<span class="comment">//new Student();</span></span><br><span class="line">		<span class="comment">//匿名对象调用方法</span></span><br><span class="line">		<span class="keyword">new</span> Student().show();</span><br><span class="line">		<span class="keyword">new</span> Student().show(); <span class="comment">//这里其实是重新创建了一个新的对象</span></span><br><span class="line">		System.out.println(<span class="string">"--------------"</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//匿名对象作为实际参数传递</span></span><br><span class="line">		StudentDemo sd = <span class="keyword">new</span> StudentDemo();</span><br><span class="line">		<span class="comment">//Student ss = new Student();</span></span><br><span class="line">		<span class="comment">//sd.method(ss); //这里的s是一个实际参数</span></span><br><span class="line">		<span class="comment">//匿名对象</span></span><br><span class="line">		sd.method(<span class="keyword">new</span> Student());</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//在来一个</span></span><br><span class="line">		<span class="keyword">new</span> StudentDemo().method(<span class="keyword">new</span> Student());</span><br><span class="line"> 	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
         
       
     </div>
