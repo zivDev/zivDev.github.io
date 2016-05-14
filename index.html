@@ -256,6 +256,106 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/29/成员变量和局部变量的区别/" itemprop="url">
+                  成员变量和局部变量的区别
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-29T10:50:23+08:00" content="2016-04-29">
+              2016-04-29
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="成员变量和局部变量的区别-理解"><a href="#成员变量和局部变量的区别-理解" class="headerlink" title="成员变量和局部变量的区别(理解)"></a>成员变量和局部变量的区别(理解)</h2><ol>
+<li>在类中的位置不同<br>成员变量：类中方法外<br>局部变量：方法定义中或者方法声明上</li>
+<li>在内存中的位置不同<br>成员变量：在堆中<br>局部变量：在栈中</li>
+<li>生命周期不同<br>成员变量：随着对象的创建而存在，随着对象的消失而消失<br>局部变量：随着方法的调用而存在，随着方法的调用完毕而消失</li>
+<li>初始化值不同<br>成员变量：有默认值<br>局部变量：没有默认值，必须定义，赋值，然后才能使用<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Varialbe</span> </span>&#123;</span><br><span class="line">	<span class="comment">//int num = 10;//成员变量</span></span><br><span class="line">	<span class="keyword">int</span> num; <span class="comment">//初始化默认值为0</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">//int num2; //没有默认值，未初始化，编译不通过报错</span></span><br><span class="line">		<span class="keyword">int</span> num2 = <span class="number">20</span>;<span class="comment">//必须初始化</span></span><br><span class="line">		System.out.println(num2);</span><br><span class="line">	</span><br><span class="line">		<span class="comment">//int num = 100;</span></span><br><span class="line">		System.out.println(num);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VariableDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Varialbe v = <span class="keyword">new</span> Varialbe();</span><br><span class="line">		System.out.println(v.num); <span class="comment">//访问成员变量</span></span><br><span class="line">		v.show();		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/29/07面向对象（匿名对象）/" itemprop="url">
                   面向对象-匿名内部类
                 </a>
@@ -408,106 +508,6 @@
               阅读全文 &raquo;
             </a>
           </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/29/成员变量和局部变量的区别/" itemprop="url">
-                  成员变量和局部变量的区别
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-29T10:50:23+08:00" content="2016-04-29">
-              2016-04-29
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="成员变量和局部变量的区别-理解"><a href="#成员变量和局部变量的区别-理解" class="headerlink" title="成员变量和局部变量的区别(理解)"></a>成员变量和局部变量的区别(理解)</h2><ol>
-<li>在类中的位置不同<br>成员变量：类中方法外<br>局部变量：方法定义中或者方法声明上</li>
-<li>在内存中的位置不同<br>成员变量：在堆中<br>局部变量：在栈中</li>
-<li>生命周期不同<br>成员变量：随着对象的创建而存在，随着对象的消失而消失<br>局部变量：随着方法的调用而存在，随着方法的调用完毕而消失</li>
-<li>初始化值不同<br>成员变量：有默认值<br>局部变量：没有默认值，必须定义，赋值，然后才能使用<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Varialbe</span> </span>&#123;</span><br><span class="line">	<span class="comment">//int num = 10;//成员变量</span></span><br><span class="line">	<span class="keyword">int</span> num; <span class="comment">//初始化默认值为0</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">//int num2; //没有默认值，未初始化，编译不通过报错</span></span><br><span class="line">		<span class="keyword">int</span> num2 = <span class="number">20</span>;<span class="comment">//必须初始化</span></span><br><span class="line">		System.out.println(num2);</span><br><span class="line">	</span><br><span class="line">		<span class="comment">//int num = 100;</span></span><br><span class="line">		System.out.println(num);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VariableDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Varialbe v = <span class="keyword">new</span> Varialbe();</span><br><span class="line">		System.out.println(v.num); <span class="comment">//访问成员变量</span></span><br><span class="line">		v.show();		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
         
       
     </div>
